@@ -1,0 +1,13 @@
+.title {
+	border-bottom: 1px solid color(var(--title-color) lightness(+25%));
+	border-top: 1px solid color(var(--title-color) lightness(+25%));
+	color: var(--title-color);
+	font-weight: lighter;
+	letter-spacing: 10px;
+	padding: 1rem 0;
+
+	@nest .hairlines & {
+		border-bottom-width: 0.5px;
+		border-top-width: 0.5px;
+	}
+}

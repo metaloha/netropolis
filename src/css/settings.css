@@ -1,0 +1,42 @@
+@lost gutter 30px;
+
+:root {
+	/* Breakpoints */
+	--breakpoint-names: small,medium,large,xlarge,xxlarge,xxxlarge; /* MUST have the same number of items as --breakpoint-values */
+	--breakpoint-values: 0,640px,1024px,1200px,1440px,1920px; /* MUST have the same number of items as --breakpoint-names */
+
+	/* Global */
+	--site-background-color: rgb(255,255,255);
+	--site-font-color: rgb(32,32,32);
+	--headings-color: var(--site-font-color);
+	--link-color: color(var(--site-font-color) lightness(+25%));
+
+	/* Typography */
+	--body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+	--heading-font-family: var(--body-font-family);
+
+	/* Grid */
+	--max-content-width: 1440px;
+	--max-site-width: 100%;
+	--grid-columns: 12;
+
+	/* Animations */
+	--speed: 0.25s;
+	--canvas-reveal-ease: ease-in-out;
+
+	/* Battery icon */
+	--battery-outline-animation-length: 300s;
+	--battery-outline-color: var(--site-font-color);
+	--battery-outline-animation-color: rgb(64,64,148);
+	--battery-plug-animation-length: 60s;
+	--battery-plug-color: color(var(--site-background-color) lightness(-5%));
+
+	/* Title */
+	--title-color: rgb(64,64,148);
+}
+
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+
+@custom-media --portrait (orientation: portrait);
+@custom-media --landscape (orientation: landscape);
+@custom-media --retina (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx);
